@@ -1,64 +1,64 @@
-<template>
-  <div id="app">
-    <img class="logo" src="./assets/logo.png">
-    <hello></hello>
-    <p>
-      Welcome to your Vue.js app!
-    </p>
-    <p>
-      To get a better understanding of how this boilerplate works, check out
-      <a href="http://vuejs-templates.github.io/webpack" target="_blank">its documentation</a>.
-      It is also recommended to go through the docs for
-      <a href="http://webpack.github.io/" target="_blank">Webpack</a> and
-      <a href="http://vuejs.github.io/vue-loader/" target="_blank">vue-loader</a>.
-      If you have any issues with the setup, please file an issue at this boilerplate's
-      <a href="https://github.com/vuejs-templates/webpack" target="_blank">repository</a>.
-    </p>
-    <p>
-      You may also want to checkout
-      <a href="https://github.com/vuejs/vue-router/" target="_blank">vue-router</a> for routing and
-      <a href="https://github.com/vuejs/vuex/" target="_blank">vuex</a> for state management.
-    </p>
-  </div>
+<template lang="jade">
+  #app
+    .navbar
+      .navbar__logo
+        a(v-link="{path: '/'}"): img(src='./assets/navbar__logo.png')
+      .navbar__menu
+        ul
+          li: a(v-link="{ path: '/news'}") News
+          li: a(v-link="{ path: '/events'}") Events
+          li: a(v-link="{ path: '/videos'}") Videos
+          li: a(v-link="{ path: '/contact'}") Blog
+          li: a(v-link="{ path: '/about'}") About
+    .content.container
+      router-view
+    .footer
 </template>
 
 <script>
-import Hello from './components/Hello'
 
-export default {
-  components: {
-    Hello
-  }
-}
 </script>
 
-<style>
-html {
-  height: 100%;
-}
+<style lang="scss">
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+  margin: 0;
+  padding: 0;
+  padding-top: 100px;
+  background-color: #f0f0f0;
 }
 
-#app {
-  color: #2c3e50;
-  margin-top: -100px;
-  max-width: 600px;
-  font-family: Source Sans Pro, Helvetica, sans-serif;
-  text-align: center;
+.navbar {
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
 }
 
-#app a {
-  color: #42b983;
-  text-decoration: none;
+.navbar__logo {
+  display: inline;
+  img {
+    margin-top: 22px;
+    margin-left: 100px;
+    width: 150px;
+  }
 }
 
-.logo {
-  width: 100px;
-  height: 100px
+.navbar__menu {
+  font-weight: bold;
+  display: inline;
+  right: 0;
+  position: absolute;
+  margin-top: 32px;
+  margin-right: 150px;
+  ul {
+    display: inline;
+    li {
+      display: inline;
+      margin: 15px;
+    }
+  }
 }
+
 </style>
