@@ -3,6 +3,8 @@ import App from './App'
 import Index from './components/Index'
 import News from './components/News'
 import Events from './components/Events'
+import Videos from './components/Videos'
+import About from './components/About'
 import VueRouter from 'vue-router'
 
 Vue.use(VueRouter);
@@ -18,6 +20,12 @@ router.map({
 	},
 	'/events': {
 		component: Events
+	},
+	'/videos': {
+		component: Videos
+	},
+	'/about': {
+		component: About
 	}
 })
 

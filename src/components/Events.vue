@@ -1,3 +1,4 @@
 <template lang="jade">
-	h1 Events
+	.container
+		h1 Events
 </template>

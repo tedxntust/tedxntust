@@ -8,9 +8,9 @@
           li: a(v-link="{ path: '/news'}") News
           li: a(v-link="{ path: '/events'}") Events
           li: a(v-link="{ path: '/videos'}") Videos
-          li: a(v-link="{ path: '/contact'}") Blog
+          li: a(v-link="{ path: '/blog'}") Blog
           li: a(v-link="{ path: '/about'}") About
-    .content.container
+    .content
       router-view
     .footer
 </template>
@@ -50,7 +50,7 @@ body {
   display: inline;
   right: 0;
   position: absolute;
-  margin-top: 32px;
+  margin-top: 30px;
   margin-right: 150px;
   ul {
     display: inline;
